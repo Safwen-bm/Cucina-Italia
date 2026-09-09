@@ -60,10 +60,3 @@ message locally; nothing is sent anywhere. To make it functional you'd
 wire the `onSubmit` handler to an API route, a form service (Formspree,
 Resend, etc.), or a booking provider (OpenTable, Tock).
 
-## Images
-
-The site ships with generated placeholder images (dark gradient panels
-labeled "Controluce") at the exact filenames and aspect ratios the
-layout expects, so it looks intentional and the layout won't shift once
-you drop real photos in. See **IMAGE-GUIDE.md** for exactly what to
-search for and where, and the filenames to save each photo as.
