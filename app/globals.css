@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Color tokens — marble ivory, bottle-green dusk, oxblood wine, brass light */
+  --color-ivory: #f2ece0;
+  --color-ivory-soft: #ece4d5;
+  --color-linen: #e4d9c4;
+  --color-ink: #221f1a;
+  --color-forest: #24382c;
+  --color-forest-deep: #16241b;
+  --color-forest-line: #3a5240;
+  --color-wine: #6f2334;
+  --color-wine-deep: #501824;
+  --color-brass: #b9975a;
+  --color-brass-light: #d9be8c;
+
+  /* Type */
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-inter);
+
+  /* Radii — restrained, only where content is a discrete object (buttons, chips) */
+  --radius-soft: 2px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: var(--color-brass);
+  color: var(--color-ink);
+}
+
+/* Editorial small-caps label — used instead of tracked-out uppercase */
+.label-caps {
+  font-variant-caps: small-caps;
+  font-feature-settings: "smcp";
+  letter-spacing: 0.02em;
+}
+
+/* The tricolore hairline — the one literal, deliberate nod to the flag */
+.tricolore-rule {
+  display: flex;
+  height: 3px;
+  width: 64px;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.tricolore-rule span {
+  flex: 1 1 0;
+}
+.tricolore-rule span:nth-child(1) { background-color: var(--color-forest-line); }
+.tricolore-rule span:nth-child(2) { background-color: var(--color-ivory); }
+.tricolore-rule span:nth-child(3) { background-color: var(--color-wine); }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 3px;
+}
