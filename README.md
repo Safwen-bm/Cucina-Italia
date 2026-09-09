@@ -1,62 +1,39 @@
-# Controluce — Italian restaurant landing page
+# Controluce
 
-A single-page, frontend-only landing page for **Controluce** ("backlit" /
-against-the-light), a fictional Italian restaurant. Built with Next.js
-(App Router) and Tailwind CSS v4.
+A landing page for **Controluce**, a fictional Italian restaurant — built
+as a design piece, not a template. The whole concept traces back to one
+idea: *controluce* is Italian for "backlit," the moment a room turns
+amber at the end of the day. The restaurant "opens when the light turns
+amber and doesn't rush anyone home before it fades," and every design
+choice follows from that deep bottle-green and marble-ivory instead of
+the usual cream-and-terracotta template look, brass standing in for
+evening light, and the Italian flag showing up exactly once, as a thin
+three-bar hairline rather than a background or a loud accent.
 
-## Run it
+## The idea behind it
 
-```bash
-npm install
-npm run dev
-```
+The goal was to get as far as possible from the generic "AI-made
+website" feel no stock hero-plus-three-cards layout, no default color
+palette, no filler copy. Every section is built the way an actual
+restaurant site would be: the menu reads like a printed menu card
+(dish, dotted leader, price), the gallery is an asymmetric photo grid
+instead of a uniform one, and the review section is a single pull-quote
+instead of a testimonial carousel. The story section, the dish names,
+the hours all written to feel specific rather than generic.
 
-Then open http://localhost:3000.
+Built with Next.js (App Router), TypeScript, and Tailwind CSS v4 —
+frontend only.
 
-`npm run build` produces a production build; `npm run start` serves it.
+## Site by
 
-## What's here
+Safwen Ben Mabrouk
+[LinkedIn](https://www.linkedin.com/in/safwen-ben-mabrouk/) &middot;
+[GitHub](https://github.com/Safwen-bm)
 
-```
-app/
-  layout.tsx     — fonts (Fraunces + Inter via next/font/google) and metadata
-  globals.css    — Tailwind v4 theme: colors, type, the tricolore hairline
-  page.tsx       — assembles the sections below
-components/
-  Nav.tsx        — transparent-over-hero nav that solidifies on scroll
-  Hero.tsx       — full-bleed hero, asymmetric layout
-  Story.tsx      — "La Storia" — narrative + portrait image
-  Menu.tsx       — "Il Menu" — printed-menu-style dish list (edit the
-                   `courses` array to change dishes/prices)
-  Gallery.tsx    — "L'Interno" — asymmetric photo grid
-  Testimonial.tsx— single pull-quote
-  Reserve.tsx    — "Prenota" — reservation form (see note below)
-  Location.tsx   — "Dove Siamo" — address + hours
-  Footer.tsx
-public/images/   — placeholder images (see IMAGE-GUIDE.md to replace them)
-```
+## License
 
-## Design notes
+&copy; 2026 Safwen Ben Mabrouk. All rights reserved.
 
-- **Colors**: the Italian flag shows up once, deliberately, as a thin
-  three-bar hairline (`.tricolore-rule` in `globals.css`) near the
-  testimonial and in the footer — not as a background or a loud accent.
-  Everything else pulls from the flag indirectly: bottle green, oxblood
-  wine, brass/gold, marble ivory.
-- **Type**: Fraunces (italic, for headlines) + Inter (body). Section
-  labels use `font-variant-caps: small-caps` instead of tracked-out
-  ALL CAPS.
-- **Fonts need internet access at build time** (next/font/google fetches
-  them from Google Fonts on first build/dev-server start, then caches
-  locally). This is normal for any Next.js project — if you're ever
-  building somewhere fully offline, swap `next/font/google` for
-  `next/font/local` in `app/layout.tsx`.
-
-## The reservation form
-
-`components/Reserve.tsx` is a real-looking reservation form, but this is
-a **frontend-only** project — submitting it just shows a confirmation
-message locally; nothing is sent anywhere. To make it functional you'd
-wire the `onSubmit` handler to an API route, a form service (Formspree,
-Resend, etc.), or a booking provider (OpenTable, Tock).
-
+This project is not open source. No part of the code or design may be
+copied, reused, redistributed, or modified without explicit written
+permission from the author.

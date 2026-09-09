@@ -17,7 +17,7 @@ const images = [
     className: "md:col-span-5 aspect-[4/3]",
   },
   {
-    src: "/images/interno-facade.jpg",
+    src: "/images/italian-table.avif",
     alt: "The entrance to Controluce at dusk",
     className: "md:col-span-12 aspect-[16/8]",
   },
